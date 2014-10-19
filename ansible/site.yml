@@ -1,4 +1,6 @@
 
 - name: Ansible Noop
   hosts: local
-  command: touch ~/success
+  
+  tasks:
+    - file: path=/home/vagrant/success state=touch
