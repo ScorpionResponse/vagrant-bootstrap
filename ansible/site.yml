@@ -1,4 +1,4 @@
 
 - name: Ansible Noop
   hosts: local
-  command: touch success
+  command: touch ~/success
