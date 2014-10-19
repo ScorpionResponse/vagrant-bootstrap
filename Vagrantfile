@@ -1,20 +1,23 @@
-Vagrant.configure("2") do |config|
 
-  if ARGV[1] == 'noshared'
-    ARGV.delete_at(1)
-    noshared = true
-  else
-    noshared = false
-  end
+if ENV['NOSHARED'] == 'true'
+  noshared = true
+else
+  noshared = false
+end
+
+Vagrant.configure("2") do |config|
 
   config.vm.box = "ubuntu/trusty64"
   config.vm.box_url = "https://vagrantcloud.com/ubuntu/boxes/trusty64/versions/1/providers/virtualbox.box"
 
   if noshared == false
+
     config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'" # avoids 'stdin: is not a tty' error.
     config.vm.provision :shell, path: "bootstrap.sh"
     config.vm.synced_folder ".", "/vagrant", mount_options: ['dmode=777','fmode=666']
+
   else
+
     $script = <<SCRIPT
 sudo apt-get update
 
