@@ -1,9 +1,6 @@
 
 - name: Ansible Noop
-  hosts: local
-  vars: 
-    - foo: Success
+  command: echo "Looks like success to me!" 
+  register: noop
 
-  tasks:
-    - name: Echo
-      command: echo "Looks like {{foo}} to me!" 
+- debug: msg="{{ noop.stdout }}"
