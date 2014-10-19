@@ -11,14 +11,14 @@ the VM and run that instead of doing the provisioning itself.
 # Running #
 
 1. Install Vagrant/VirtualBox on Windows machine
-2. Install Git (for SSH and github access on Windows machine
-3. git clone this repo
+2. Install Git (for SSH and github access) on Windows machine
+3. `git clone` this repo
 4. Run `vagrant up`
-5. Verify that everything worked
+5. Verify that everything worked:
 ```
   (host)$ vagrant ssh
   (vm)$ ls
-    hosts  vagrant-bootstrap
+    vagrant-bootstrap
 ```
 
 # License #
