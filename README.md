@@ -19,6 +19,8 @@ for you.
 
 This repo is a proof of concept for the two slightly different models of
 isolating Windows from the VM and bootstrapping into a working environment.
+Both of these should work exactly the same way on a Mac or Linux host, though I
+have not tried it.
 
 # Running #
 
