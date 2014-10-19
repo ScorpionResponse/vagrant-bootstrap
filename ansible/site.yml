@@ -1,6 +1,4 @@
 
 - name: Ansible Noop
-  command: echo "Looks like success to me!" 
-  register: noop
-
-- debug: msg="{{ noop.stdout }}"
+  hosts: local
+  command: touch success
