@@ -12,6 +12,5 @@ sudo apt-add-repository -y ppa:ansible/ansible
 sudo apt-get update
 sudo apt-get install -y ansible
 
-echo -e "[localhost]\nlocalhost\n" > /home/vagrant/hosts
-chmod 666 /home/vagrant/hosts
-sudo ansible-playbook /vagrant/site.yml -i /home/vagrant/hosts --connection=local
+# Run playbook to spin up VM
+sudo ansible-playbook /vagrant/site.yml -i /vagrant/hosts --connection=local
