@@ -59,9 +59,9 @@ The reason for two different options is that sharing files between the Windows
 host and Linux VM is problematic.  This is not an issue I ran into, but with
 the first version only three files are shared during the bootstrap process:
 ```
+  ansible/hosts
+  ansible/bootstrap.yml
   bootstrap.sh
-  hosts
-  site.yml
 ```
 
 At the moment, they are as simple as an Ansible playbook configuration and bash
