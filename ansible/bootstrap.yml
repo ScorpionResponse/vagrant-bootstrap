@@ -1,7 +1,6 @@
 
 - name: Download the vagrant-bootstrap repo
   hosts: local
-  remote_user: vagrant
 
   tasks:
   - name: Install git
@@ -10,3 +9,5 @@
     git: repo=git://github.com/scorpionresponse/vagrant-bootstrap.git
          dest=/home/vagrant/vagrant-bootstrap
          accept_hostkey=True
+    sudo: yes
+    sudo_user: vagrant
