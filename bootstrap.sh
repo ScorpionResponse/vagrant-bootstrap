@@ -12,5 +12,10 @@ sudo apt-add-repository -y ppa:ansible/ansible
 sudo apt-get update
 sudo apt-get install -y ansible
 
-# Run playbook to spin up VM
-sudo ansible-playbook /vagrant/site.yml -i /vagrant/hosts --connection=local
+# Run playbook to provision up VM
+# This just installs git and checks out this repo
+sudo ansible-playbook /vagrant/ansible/bootstrap.yml -i /vagrant/ansible/hosts --connection=local
+
+# Run Noop for a Proof of concept
+cd vagrant-bootstrap
+sudo ansible-playbook ansible/site.yml -i ansible/hosts --connection=local

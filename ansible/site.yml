@@ -1,0 +1,9 @@
+
+- name: Ansible Noop
+  hosts: local
+  vars: 
+    - foo: Success
+
+  tasks:
+    - name: Echo
+      command: echo "Looks like {{foo}} to me!" 

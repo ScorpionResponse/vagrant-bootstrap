@@ -1,6 +1,6 @@
 
 - name: Download the vagrant-bootstrap repo
-  hosts: localhost
+  hosts: local
   user: vagrant
 
   tasks:
