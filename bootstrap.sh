@@ -12,6 +12,6 @@ sudo apt-add-repository -y ppa:ansible/ansible
 sudo apt-get update
 sudo apt-get install -y ansible
 
-echo -e "[local]\nlocal\n" > /home/vagrant/hosts
+echo -e "[localhost]\nlocalhost\n" > /home/vagrant/hosts
 chmod 666 /home/vagrant/hosts
 sudo ansible-playbook /vagrant/site.yml -i /home/vagrant/hosts --connection=local

@@ -1,9 +1,12 @@
 
 - name: Download the vagrant-bootstrap repo
-  hosts: local
+  hosts: localhost
   user: vagrant
 
   tasks:
+  - name: Install git
+    apt: name=git state=present
   - name: Checkout the bootstrap project
     git: repo=git://github.com/scorpionresponse/vagrant-bootstrap.git
          dest=/home/vagrant/vagrant-bootstrap
+         accept_hostkey=True
