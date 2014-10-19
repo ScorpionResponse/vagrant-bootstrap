@@ -46,8 +46,8 @@ isolating Windows from the VM and bootstrapping into a working environment.
   (host)$ vagrant ssh
   (vm)$ ls -l
     total 4
-    -rw-r--r-- 1 vagrant vagrant    0 Oct 19 13:24 success
-    drwxr-xr-x 4 vagrant vagrant 4096 Oct 19 13:24 vagrant-bootstrap
+    -rw-r--r-- 1 vagrant vagrant    0 Oct 19 13:56 success
+    drwxr-xr-x 4 vagrant vagrant 4096 Oct 19 13:56 vagrant-bootstrap
 ```
 
 # Some notes #
