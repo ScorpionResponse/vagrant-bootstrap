@@ -41,7 +41,7 @@ apt-get install -y ansible
 apt-get install -y git
 
 # Checkout the repo
-sudo -u vagrant git clone https://github.com/ScorpionResponse/vagrant-bootstrap.git vagrant-bootstrap
+sudo -i -u vagrant git clone https://github.com/ScorpionResponse/vagrant-bootstrap.git vagrant-bootstrap
 
 # Run Noop for a Proof of concept
 cd vagrant-bootstrap
