@@ -1,7 +1,7 @@
 
 - name: Ansible Noop
   hosts: local
-  user: vagrant
+  remote_user: vagrant
   
   tasks:
     - file: path=/home/vagrant/success state=touch
