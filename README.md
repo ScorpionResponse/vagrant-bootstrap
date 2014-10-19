@@ -19,6 +19,7 @@ the VM and run that instead of doing the provisioning itself.
   (host)$ vagrant ssh
   (vm)$ ls
     hosts  vagrant-bootstrap
+```
 
 # License #
 
