@@ -8,6 +8,11 @@ Vagrant VM and provision the VM with Ansible, this Vagrantfile will bootstrap
 the process by loading a bash script into the VM and run that instead of doing
 the provisioning from the host.
 
+This does not require installing Ansible or Cygwin on the Windows machine.  All
+you need is Vagrant and an SSH client.  I use the SSH client that comes with
+Git on Windows since it is also useful to clone this repo instead of manually
+downloading it to the Windows host.
+
 If you're in a similar situation, creating a Linux VM from a Windows host with
 Vagrant and you want to use Ansible for provisioning, then maybe this can work
 for you.
