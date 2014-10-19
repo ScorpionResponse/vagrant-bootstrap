@@ -34,7 +34,7 @@ git clone https://github.com/ScorpionResponse/vagrant-bootstrap.git vagrant-boot
 cd vagrant-bootstrap
 sudo ansible-playbook ansible/site.yml -i ansible/hosts --connection=local
 
-SCRIPT 
+SCRIPT
 
     config.vm.provision :shell, inline: $script
 
