@@ -71,6 +71,12 @@ script would not trigger it.  Otherwise, the only remaining solution would seem
 to be inlining the entire bootstrap script in the Vagrantfile:
 https://docs.vagrantup.com/v2/provisioning/shell.html#inline-scripts
 
+The final caveat is that all of this assumes you can just `git clone` the
+actual code you want to run inside the VM.  If you can do that, then all of
+this could be accomplished with just Vagrant and a modified version of this
+Vagrantfile on the host in a pinch.  If you can't do that, then check out the
+blog post linked above for some other details or suggestions.
+
 # License #
 
 Apache 2
