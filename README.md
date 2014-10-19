@@ -5,8 +5,8 @@ Vagrant Bootstrap
 
 Ansible doesn't run on a Windows machine.  In order to use a Windows host for a
 Vagrant VM and provision the VM with Ansible, this Vagrantfile will bootstrap
-the process by loading a bash script into the VM and run that instead of doing
-the provisioning from the host.
+the process by installing Ansible on the VM and run playbooks locally instead
+of doing the provisioning from the host.
 
 This does not require installing Ansible or Cygwin on the Windows machine.  All
 you need is Vagrant and an SSH client.  I use the SSH client that comes with
@@ -79,7 +79,7 @@ Guessing based on the links from the blog post the problems seem to be related
 mostly to actually editing a file or otherwise writing back to the Windows
 host.  Hopefully that means the simple, read-only execution of the bootstrap.sh
 script would not trigger it and therefore you should also be safe to copy over
-additional files.
+additional files during the bootstrap process.
 
 A completely isolated solution is also provided in this Vagrantfile.  Instead
 of just `vagrant up` run `NOSHARED='true' vagrant up`.  This will not share
