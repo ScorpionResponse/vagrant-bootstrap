@@ -1,7 +1,7 @@
 
-- name: install git
+- name: Download the vagrant-bootstrap repo
   hosts: local
-  user: root
+  user: vagrant
 
   tasks:
   - name: Checkout the bootstrap project
