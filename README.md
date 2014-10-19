@@ -67,8 +67,9 @@ Windows host.
 Guessing based on the links from the blog post the problems seem to be related
 mostly to actually editing a file or otherwise writing back to the Windows
 host.  Hopefully that means the simple, read-only execution of the bootstrap.sh
-script would not trigger it (because otherwise I have no idea how to make this
-work).
+script would not trigger it.  Otherwise, the only remaining solution would seem
+to be inlining the entire bootstrap script in the Vagrantfile:
+https://docs.vagrantup.com/v2/provisioning/shell.html#inline-scripts
 
 # License #
 
