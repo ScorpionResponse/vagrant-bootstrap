@@ -71,9 +71,9 @@ warnings.
 
 The bootstrap process should leave you with a local checkout of this project.
 Assuming everything worked, the file `success` is created by the local instance
-of Ansible from the checkout of the repo on the VM.  Any further actions should
-be done on that copy the same way instead of on the version shared from the
-Windows host.
+of Ansible running the playbook `ansible/site.yml` from the checkout of the
+repo on the VM.  Any further actions should be done on that copy the same way
+instead of on the version shared from the Windows host.
 
 Guessing based on the links from the blog post the problems seem to be related
 mostly to actually editing a file or otherwise writing back to the Windows

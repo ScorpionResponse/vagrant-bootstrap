@@ -1,3 +1,10 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+# Invoke this with either
+# vagrant up
+# or
+# NOSHARED='true' vagrant up
 
 if ENV['NOSHARED'] == 'true'
   noshared = true
@@ -12,11 +19,14 @@ Vagrant.configure("2") do |config|
   config.ssh.shell = "bash -c 'BASH_ENV=/etc/profile exec bash'" # avoids 'stdin: is not a tty' error.
 
   if noshared == false
+    # Mount the current working directory
+    # and execute the bootstrap script which calls the Ansible bootstrap process
 
     config.vm.provision :shell, path: "bootstrap.sh"
     config.vm.synced_folder ".", "/vagrant", mount_options: ['dmode=777','fmode=666']
 
   else
+    # Mount nothing and run this heredoc inline
 
     $script = <<SCRIPT
 apt-get update

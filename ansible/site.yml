@@ -1,3 +1,6 @@
+---
+# This does essentially nothing.
+# It just touches a file 'success' to prove that it ran
 
 - name: Ansible Noop
   hosts: local
