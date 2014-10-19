@@ -1,0 +1,9 @@
+
+- name: install git
+  hosts: local
+  user: root
+
+  tasks:
+  - name: Checkout the bootstrap project
+    git: repo=git://github.com/scorpionresponse/vagrant-bootstrap.git
+         dest=/home/vagrant/vagrant-bootstrap
